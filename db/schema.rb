@@ -11,11 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140518204135) do
+ActiveRecord::Schema.define(version: 20140518205613) do
 
   create_table "assignees", force: true do |t|
     t.string   "name"
-    t.integer  "to_do_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -26,6 +25,7 @@ ActiveRecord::Schema.define(version: 20140518204135) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "task"
+    t.integer  "assignee_id"
   end
 
 end
